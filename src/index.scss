@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "Oxanium";
+  src: url("./assets/fonts/oxanium/Oxanium.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  font-weight: 400;
+  src: url("./assets/fonts/sourcecodepro/SourceCodePro.ttf") format("truetype");
+  font-style: normal;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  min-height: 200vh;
+}
+:root{
+  --main-color:#240f52;
+  --secondary-color:#0c0f18;
+  --main-light-color:#816b9a;
+}
+
+.header{
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
+  transition: background-color 0.4s;
+}
+
+
+
+.header-cont{
+  
+  display: flex;
+  padding: 1rem 2.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  color: #fff;
+}
+.header-heading{
+  flex:2;
+  font-family: "Oxanium";
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.13rem;
+}
+
+
+
+.nav-menu{
+  flex: 2;
+}
+.nav-menu-list{
+
+  font-family:"SourceCodePro";
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.theme-switch-cont .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch-cont{
+  opacity: 0;
+}
+.theme-switch-cont .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-cont .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.theme-switch-cont .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--secondary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.theme-switch-cont .slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+.ripple-navbtn{
+  background-position: center;
+  transition: background 0.8s;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  font-family: "SourceCodePro";
+  padding: 12px 18px;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  color: white;
+  background-color:transparent;
+  outline: none;
+}
+
+.ripple-navbtn:hover{
+  background: transparent radial-gradient(circle, transparent 1%, transparent 1%) center/15000%;
+ 
+}
+.ripple-navbtn:active{
+  background-color:  rgba(255, 255, 255,0.3);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+.hero-container{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/hero-raven.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.hero-content{
+  width: 60%;
+  padding-left: 4rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  font-family: "SourceCodePro";
+ 
+}
+
+.hero-content-first{
+  border-right: 2px solid rgba(255,255,255,.75);
+  text-align: left;
+  overflow: hidden;
+  width:fit-content;
+  white-space: nowrap;
+  transform: translateY(-50%);
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+            
+
+}
+
+.hero-content-first h1{
+  padding-bottom: 0.7rem;
+}
+
+.hero-content-second{
+  border-right: none;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: translateY(-50%);
+  animation: typewriter 4s steps(44) 5s 1 normal both,
+             blinkTextCursorEnd 500ms steps(44) infinite normal;
+            
+}
+/*
+tiebe un seg de delay
+
+@keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+
+@keyframes typewriter{
+  from{width: 0%;}
+  to{
+    width: 60%;
+    border: none;
+  }
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+@keyframes blinkTextCursorEnd{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color:2px solid rgba(255,255,255,.75);}
+}
+
+
+.whatsapp-btn{
+  display: block;
+  opacity: 0;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  border-radius: 0.3rem;
+  font-family: "SourceCodePro";
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  animation: fadeInButton 0.4s steps(44) 5s 1 normal both;
+}
+
+@keyframes fadeInButton {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+
+.header-scrolled{
+  background-color: var(--secondary-color);
+  box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.45);
+  
+}
+
+.aboutMe-cont{
+  background-color: var(--secondary-color);
+  min-height: 80vh;
+  font-family: "SourceCodePro";
+  color: #fff;
+  padding: 5% 10%;
+}
+
+.aboutMe-cont p{
+  text-align: center;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  font-size: larger;
+  padding: 0 10%;
+}

@@ -18,8 +18,10 @@ export const modeSlice=createSlice({
         flipTheSwitch:(state)=>{
             if(state.value === "dark"){
                 state.value="light"
+                
             }else{
                 state.value="dark"
+                
             }
         }
     }

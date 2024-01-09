@@ -1,47 +1,55 @@
-import { AppBar, Box, Container, List, ListItem, ListItemButton, Switch, Toolbar, Typography, useTheme } from '@mui/material'
-import React from 'react'
+
+import React, { useState,useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { flipTheSwitch } from '../modeSlice'
+import NavButton from './NavButton'
+
 
 function NavHeader() {
 
+    const [theme, setTheme] = useState(false)
 
-    const theme= useTheme()
-
+   
+    const [scrolled, setScrolled] = useState("")
     const mode = useSelector((state)=>state.mode.value)
     const dispatch = useDispatch()
 
-    console.log(theme.typography.fontFamily)
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY < 100) {
+                setScrolled('');
+            } else {
+                setScrolled('header-scrolled');
+            }
+        });
+    }, [])
+    
+   
 
 
 
   return (
-    <AppBar >
-        <Toolbar disableGutters={true}  sx={{display:"flex",justifyContent:"space-evenly",alignItems:"center"}}>
-           
-                <Box>
-                    <span onChecked={()=>dispatch(flipTheSwitch())}>{mode}</span>
-                    <Switch color='error'></Switch>
-                </Box>
-                <Typography fontSize="2.6rem" fontFamily="Oxanium">Raven Design</Typography>
-                <List sx={{display:"flex",justifyContent:"space-between"}}>
-                    <ListItem>
-                        <ListItemButton>Home</ListItemButton>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemButton sx={{textWrap:"nowrap"}}>Sobre mi  </ListItemButton>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemButton>Portafolio</ListItemButton>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemButton>Contactame</ListItemButton>
-                    </ListItem>
-                </List>
-
-           
-        </Toolbar>
-    </AppBar>
+    <header className={"header "+scrolled}>
+        <div className="header-cont">
+            <div className="theme-switch-cont">
+                <span></span>
+                <label className="switch" >
+                    <input type="checkbox" checked={theme} onChange={()=>setTheme((state)=>!state)}/>
+                     <span className="slider round"></span>
+                </label>
+            </div>
+            <div className="header-heading">
+                <span>Raven Design</span>
+            </div>
+            <div className="nav-menu">
+                <ul className="nav-menu-list">
+                  <NavButton content="home"/>
+                  <NavButton content="sobre mi"/>
+                  <NavButton content ="Portafolio"/>
+                  <NavButton content="Contacto"/>
+                </ul>
+            </div>
+        </div>
+    </header>
   )
 }
 
