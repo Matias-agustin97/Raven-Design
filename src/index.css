@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Oxanium";
+  src: url("./assets/fonts/oxanium/Oxanium.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  font-weight: 400;
+  src: url("./assets/fonts/sourcecodepro/SourceCodePro.ttf") format("ttf");
+}
+
