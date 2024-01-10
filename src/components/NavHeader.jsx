@@ -30,13 +30,6 @@ function NavHeader() {
   return (
     <header className={"header "+scrolled}>
         <div className="header-cont">
-            <div className="theme-switch-cont">
-                <span></span>
-                <label className="switch" >
-                    <input type="checkbox" checked={theme} onChange={()=>setTheme((state)=>!state)}/>
-                     <span className="slider round"></span>
-                </label>
-            </div>
             <div className="header-heading">
                 <span>Raven Design</span>
             </div>

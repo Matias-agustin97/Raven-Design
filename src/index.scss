@@ -46,9 +46,9 @@ body{
   color: #fff;
 }
 .header-heading{
-  flex:2;
+  flex:1;
   font-family: "Oxanium";
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.13rem;
@@ -66,68 +66,6 @@ body{
   list-style: none;
   display: flex;
   justify-content: space-around;
-}
-
-.theme-switch-cont .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.theme-switch-cont{
-  opacity: 0;
-}
-.theme-switch-cont .switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-switch-cont .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--main-color);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.theme-switch-cont .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: var(--secondary-color);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--secondary-color);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.theme-switch-cont .slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 
@@ -166,14 +104,12 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  
 }
 .hero-content{
-  width: 60%;
-  padding-left: 4rem;
-  padding-bottom: 1rem;
+  padding-top: 18%;
+  padding-left: 15%;
+  width: 100%;
   color: #fff;
   font-family: "SourceCodePro";
  
@@ -194,6 +130,8 @@ input:checked + .slider:before {
 
 .hero-content-first h1{
   padding-bottom: 0.7rem;
+  font-size: 2rem;
+  text-shadow: 0px 2px 2px rgba(255,255,255,.75);
 }
 
 .hero-content-second{
@@ -234,7 +172,7 @@ iteration-count | direction | fill-mode | play-state | name */
   opacity: 0;
   background-color: var(--secondary-color);
   cursor: pointer;
-  border: 1px solid var(--main-color);
+  border: none;
   border-radius: 0.3rem;
   font-family: "SourceCodePro";
   font-weight: 500;
@@ -275,4 +213,11 @@ iteration-count | direction | fill-mode | play-state | name */
   word-wrap: break-word;
   font-size: larger;
   padding: 0 10%;
+}
+
+.myStack-list{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
 }
