@@ -47,6 +47,12 @@ function NavHeader() {
             <span className={mobileMenu? "mobile-menu-bars mobile-bar-2": "mobile-menu-bars"}></span>
             </div>
         </div>
+        <div className="modal-cont">
+        <div className={mobileMenu? "mobile-modal-box mobile-modal-box-active":"mobile-modal-box"}>
+            <div className="mobile-modal-menu"></div>
+            
+        </div>
+        </div>
     </header>
   )
 }

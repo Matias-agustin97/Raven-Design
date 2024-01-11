@@ -29,15 +29,16 @@ body{
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 9;
   background-color: transparent;
   transition: background-color 0.4s;
+  overflow: hidden;
 }
 
 
 
 .header-cont{
-  
+  z-index: 19;
   display: flex;
   padding: 1rem 2.5rem;
   justify-content: space-evenly;
@@ -236,3 +237,37 @@ iteration-count | direction | fill-mode | play-state | name */
   text-align: center;
   align-items: stretch;
 }
+
+
+.modal-cont{
+  position: relative;
+}
+
+.mobile-modal-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+  transform: translateX(-100%);
+  transition: transform ease-in-out 0.35s;
+  overflow: hidden;
+}
+
+
+
+.mobile-modal-box-active{
+ transform: translateX(0);
+}
+
+.mobile-modal-menu{
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  display: inline-block;
+  
+  
+}
+
+

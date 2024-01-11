@@ -84,6 +84,7 @@ body{
     height: 1.5rem;
     width: 1.5rem;
     justify-content: space-between;
+    z-index: 20;
    
   }
   .mobile-menu-bars{
@@ -99,5 +100,6 @@ body{
   animation-duration: 1s;
   animation-delay: 0.25s;
   animation-fill-mode: both;
+  
  }
 }
