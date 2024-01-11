@@ -8,6 +8,7 @@ function NavHeader() {
 
     const [theme, setTheme] = useState(false)
 
+    const [mobileMenu,setMobileMenu]=useState(false)
    
     const [scrolled, setScrolled] = useState("")
     const mode = useSelector((state)=>state.mode.value)
@@ -40,6 +41,10 @@ function NavHeader() {
                   <NavButton content ="Portafolio"/>
                   <NavButton content="Contacto"/>
                 </ul>
+            </div>
+            <div className={mobileMenu?"mobile-menu-active mobile-menu":"mobile-menu"} onClick={()=>setMobileMenu((state)=>!state)} >
+            <span className={mobileMenu? "mobile-menu-bars mobile-bar-1": "mobile-menu-bars"}></span>
+            <span className={mobileMenu? "mobile-menu-bars mobile-bar-2": "mobile-menu-bars"}></span>
             </div>
         </div>
     </header>

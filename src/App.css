@@ -28,3 +28,76 @@ body{
     height: 78px
   }  
 }
+
+
+.mobile-menu{
+  display: none;
+}
+
+
+
+
+@keyframes menuRotation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+.mobile-bar-1{
+  transform:rotate(45deg) translateY(0.5rem)  translateX(0.5rem);
+  
+  /* transform: rotate(45deg) translateY(10px);
+  
+  animation: menuRotation;
+  animation-duration: 1s; 
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  
+  */
+}
+.mobile-bar-2{
+  transform:rotate(-45deg) translateY(-0.5rem) translateX(0.5rem)  ;
+  
+  /* transform: rotate(-45deg) translateY(10px);
+  animation: menuRotation;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  */
+}
+
+
+
+
+
+@media (max-width:900px) {
+  .nav-menu{
+    display: none;
+  }
+  .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    height: 1.5rem;
+    width: 1.5rem;
+    justify-content: space-between;
+   
+  }
+  .mobile-menu-bars{
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color:#fff;
+    transition: transform ease-in-out 0.35s ;
+    
+   
+  }
+ .mobile-menu-active{
+  animation: menuRotation;
+  animation-duration: 1s;
+  animation-delay: 0.25s;
+  animation-fill-mode: both;
+ }
+}

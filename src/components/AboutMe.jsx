@@ -1,9 +1,8 @@
 import React from 'react'
 import JavaLogo from "../assets/svg/java_logo.svg"
 import JsLogo from "../assets/svg/javascript_logo.svg"
-import ReactLogo from "../assets/svg/react.svg"
+import ReactLogo from "../assets/svg/react-2.svg"
 import HostingerLogo from "../assets/svg/hostinger_logo.svg"
-import { Javascript } from '@mui/icons-material'
 import StackItem from './StackItem'
 
 
@@ -47,11 +46,11 @@ function AboutMe() {
         </div>
         <img src={JavaLogo} height="auto" width="1"/>
         <div className="myStack">
-          <div>Mi Stack</div>
+          <div style={{textAlign:"center",fontSize:"1.7rem",fontWeight:"bold"}}>Mi Stack</div>
           <ul className='myStack-list'>
           {stackItems.map((item)=>{
            return (
-            <StackItem logo={item.logo} altText={item.altText} titulo={item.titulo} body={item.body}/>
+            <StackItem logo={item.logo} altText={item.altText} titulo={item.titulo} body={item.body} key={item.titulo}/>
            )
            
           })}

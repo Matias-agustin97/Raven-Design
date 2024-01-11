@@ -218,6 +218,21 @@ iteration-count | direction | fill-mode | play-state | name */
 .myStack-list{
   list-style: none;
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
+  grid-template-columns: 2(1fr);
+  grid-template-rows: 2(1fr);
+  grid-row-gap: 2rem;
+}
+
+.myStack-list li{
+  display: flex;
+}
+
+
+.stack-li{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: stretch;
 }

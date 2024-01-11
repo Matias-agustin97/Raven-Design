@@ -5,7 +5,7 @@ function StackItem({logo,altText,titulo,body}) {
     <li>
         <img src={logo} alt={altText} width="200px" height="auto"/>
         <div className="stack-li">
-            <h5>{titulo}</h5>
+            <h5 style={{fontSize:"1.6rem"}}>{titulo}</h5>
             <p>{body}</p>
         </div>
     </li>
