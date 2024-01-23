@@ -30,29 +30,7 @@ function NavHeader() {
 
   return (
     <header className={"header "+scrolled}>
-        <div className="header-cont">
-            <div className="header-heading">
-                <span>Raven Design</span>
-            </div>
-            <div className="nav-menu">
-                <ul className="nav-menu-list">
-                  <NavButton content="home"/>
-                  <NavButton content="sobre mi"/>
-                  <NavButton content ="Portafolio"/>
-                  <NavButton content="Contacto"/>
-                </ul>
-            </div>
-            <div className={mobileMenu?"mobile-menu-active mobile-menu":"mobile-menu"} onClick={()=>setMobileMenu((state)=>!state)} >
-            <span className={mobileMenu? "mobile-menu-bars mobile-bar-1": "mobile-menu-bars"}></span>
-            <span className={mobileMenu? "mobile-menu-bars mobile-bar-2": "mobile-menu-bars"}></span>
-            </div>
-        </div>
-        <div className="modal-cont">
-        <div className={mobileMenu? "mobile-modal-box mobile-modal-box-active":"mobile-modal-box"}>
-            <div className="mobile-modal-menu"></div>
-            
-        </div>
-        </div>
+      
     </header>
   )
 }
