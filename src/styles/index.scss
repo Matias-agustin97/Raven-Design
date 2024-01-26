@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+.landing-wrapper{
+  background-image: url("../assets/svg/hero-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-clip: border-box;
+
+  min-height: 80vh;
+  display: block;
+}

@@ -1,34 +1,34 @@
-Source Code Pro Variable Font
-=============================
+JetBrains Mono Variable Font
+============================
 
-This download contains Source Code Pro as both variable fonts and static fonts.
+This download contains JetBrains Mono as both variable fonts and static fonts.
 
-Source Code Pro is a variable font with this axis:
+JetBrains Mono is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
-  SourceCodePro-VariableFont_wght.ttf
-  SourceCodePro-Italic-VariableFont_wght.ttf
+  JetBrainsMono-VariableFont_wght.ttf
+  JetBrainsMono-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Source Code Pro:
-  static/SourceCodePro-ExtraLight.ttf
-  static/SourceCodePro-Light.ttf
-  static/SourceCodePro-Regular.ttf
-  static/SourceCodePro-Medium.ttf
-  static/SourceCodePro-SemiBold.ttf
-  static/SourceCodePro-Bold.ttf
-  static/SourceCodePro-ExtraBold.ttf
-  static/SourceCodePro-Black.ttf
-  static/SourceCodePro-ExtraLightItalic.ttf
-  static/SourceCodePro-LightItalic.ttf
-  static/SourceCodePro-Italic.ttf
-  static/SourceCodePro-MediumItalic.ttf
-  static/SourceCodePro-SemiBoldItalic.ttf
-  static/SourceCodePro-BoldItalic.ttf
-  static/SourceCodePro-ExtraBoldItalic.ttf
-  static/SourceCodePro-BlackItalic.ttf
+in those cases you can use the static font files for JetBrains Mono:
+  static/JetBrainsMono-Thin.ttf
+  static/JetBrainsMono-ExtraLight.ttf
+  static/JetBrainsMono-Light.ttf
+  static/JetBrainsMono-Regular.ttf
+  static/JetBrainsMono-Medium.ttf
+  static/JetBrainsMono-SemiBold.ttf
+  static/JetBrainsMono-Bold.ttf
+  static/JetBrainsMono-ExtraBold.ttf
+  static/JetBrainsMono-ThinItalic.ttf
+  static/JetBrainsMono-ExtraLightItalic.ttf
+  static/JetBrainsMono-LightItalic.ttf
+  static/JetBrainsMono-Italic.ttf
+  static/JetBrainsMono-MediumItalic.ttf
+  static/JetBrainsMono-SemiBoldItalic.ttf
+  static/JetBrainsMono-BoldItalic.ttf
+  static/JetBrainsMono-ExtraBoldItalic.ttf
 
 Get started
 -----------

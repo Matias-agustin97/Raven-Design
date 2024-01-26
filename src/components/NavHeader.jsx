@@ -1,7 +1,8 @@
 
 import React, { useState,useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import NavButton from './NavButton'
+import { Outlet } from 'react-router-dom'
+
 
 
 function NavHeader() {
@@ -29,9 +30,12 @@ function NavHeader() {
 
 
   return (
+   <>
     <header className={"header "+scrolled}>
       
-    </header>
+      </header>
+      <Outlet/>
+   </>
   )
 }
 
