@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
     VitePWA({
+      strategies:"injectManifest",
       manifest:{
         name:"Raven Design",
         description:"desarollo de paginas web con react",
